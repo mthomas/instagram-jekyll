@@ -1,0 +1,19 @@
+Inspired by https://github.com/christianhellsten/jekyll-plugins.
+
+Install by putting in a folder named _plugins in your project directory.
+
+Allows you to render Instagram photos.
+
+The plugin requires a text file containing an Instagram access token.  You can get this by navigating to https://instagram.com/oauth/authorize/?client_id=71645919387a45dca4f5233151f4c450&redirect_uri=http://instagram.thomas.io&response_type=token then copying the access_token from the query string.
+
+The plugin requires the Instagram gem (gem install instagram) and returns results directly from Instagram.
+
+Usage:
+
+{% instagram accesstokenpath:C:\instagram-access-token.txt %}
+	<div>
+		<h3>{{ item.caption.text }}</h3>
+		<img src="{{ item.images.standard_resolution.url }}" />
+	</div>
+{% endinstagram %}
+
